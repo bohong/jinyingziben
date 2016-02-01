@@ -28,25 +28,34 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
+        <meta charset="UTF-8">
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+        <link rel="stylesheet" href="themes/jinying.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="jquery.mobile.structure-1.4.5.min.css" />
+        <link rel="stylesheet" href="css/index.css">
         <title>金英资本</title>
     </head>
     <body>
-    <div class="app">
-        <div data-role="page" id="pagehome">
+        <div data-role="page" id="pagehome" data-theme="a">
             <div data-role="header" data-position="fixed">
                 <h1>金英首页</h1>
             </div>
             <div data-role="main" class="ui-content">
-                <p>If you swipe me in the left direction, I will disappear.</p>
-                <p>Swipe me in the left direction!</p>
-                <p id="tohide">Swipe me in the left direction, too!</p>
-                <p id="tohide2">Swipe me in the left direction, too!2</p>
-                <p id="tohide3">Swipe me in the left direction, too!3</p>
+                <div id="slideshow">
+                    <div>
+                        <img src="img/jinyingproducts.jpg">
+                    </div>
+                    <div>
+                        <img src="img/jinyingmembership.jpg">
+                    </div>
+                    <div>
+                        <img src="img/jinyingcapitalservice.jpg">
+                    </div>
+                </div>
                 <h1>金融产品</h1>
                 <ul data-role="listview">
                     <li><a href="#">保诚保险产品</a></li>
@@ -66,7 +75,7 @@
             </div>
         </div>
 
-        <div data-role="page" id="pagevips">
+        <div data-role="page" id="pagevips" data-theme="a">
             <div data-role="header" data-position="fixed">
                 <h1>金英会员</h1>
             </div>
@@ -74,7 +83,7 @@
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#pagehome" data-transition="slide">金英首页</a></li>
+                        <li><a href="#pagehome" data-transition="slide" data-direction="reverse">金英首页</a></li>
                         <li><a href="#" class="ui-btn-active ui-state-persist" >金英会员</a></li>
                         <li><a href="#pagenews" data-transition="slide">金英动态</a></li>
                         <li><a href="#pagemine" data-transition="slide">我的帐户</a></li>
@@ -83,7 +92,7 @@
             </div>
         </div>
 
-        <div data-role="page" id="pagenews">
+        <div data-role="page" id="pagenews" data-theme="a">
             <div data-role="header" data-position="fixed">
                 <h1>金英动态</h1>
             </div>
@@ -91,8 +100,8 @@
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#pagehome" data-transition="slide">金英首页</a></li>
-                        <li><a href="#pagevips" data-transition="slide">金英会员</a></li>
+                        <li><a href="#pagehome" data-transition="slide" data-direction="reverse">金英首页</a></li>
+                        <li><a href="#pagevips" data-transition="slide" data-direction="reverse">金英会员</a></li>
                         <li><a href="#" class="ui-btn-active ui-state-persist" >金英动态</a></li>
                         <li><a href="#pagemine" data-transition="slide">我的帐户</a></li>
                     </ul>
@@ -100,7 +109,7 @@
             </div>
         </div>
 
-        <div data-role="page" id="pagemine">
+        <div data-role="page" id="pagemine" data-theme="a">
             <div data-role="header" data-position="fixed">
                 <h1>我的帐户</h1>
             </div>
@@ -108,15 +117,14 @@
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#pagehome" data-transition="slide">金英首页</a></li>
-                        <li><a href="#pagevips" data-transition="slide">金英会员</a></li>
-                        <li><a href="#pagenews" data-transition="slide">金英动态</a></li>
+                        <li><a href="#pagehome" data-transition="slide" data-direction="reverse">金英首页</a></li>
+                        <li><a href="#pagevips" data-transition="slide" data-direction="reverse">金英会员</a></li>
+                        <li><a href="#pagenews" data-transition="slide" data-direction="reverse">金英动态</a></li>
                         <li><a href="#" class="ui-btn-active ui-state-persist" >我的帐户</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script src="jquery-2.2.0.js"></script>
         <script src="jquery.mobile-1.4.5.js"></script>

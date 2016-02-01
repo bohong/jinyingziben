@@ -114,3 +114,15 @@ $("div[data-role='page']").on("swiperight", function(){
     console.log("swiperight");
     $.mobile.changePage("#" + prevPage(),{transition:"slide", reverse: true});
 });
+
+//slide show code
+$("#slideshow > div:gt(0)").hide();
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(0)
+    .next()
+    .fadeIn(0)
+    .end()
+    .appendTo('#slideshow');
+},  5000);
+
